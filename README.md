@@ -1,11 +1,17 @@
 <div align="center">
 
-  <img src="docs/logo.png" alt="Rivra Logo" width="140" />
+  <img src="docs/logo.png" alt="Rivra Logo" width="130" />
 
   # Rivra
 
-  **Baixador multimídia moderno e veloz para Windows**  
+  **Baixador multimídia moderno, rápido e intuitivo para Windows**  
   Construído com Python, CustomTkinter e o poder do [yt-dlp](https://github.com/yt-dlp/yt-dlp).
+
+  <p>
+    <a href="https://github.com/blnkDev/Yt-Downloader/releases/latest">
+      <img src="https://img.shields.io/badge/Download-Windows%20(.exe)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows" />
+    </a>
+  </p>
 
   <p>
     <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
@@ -18,96 +24,103 @@
 
 ---
 
-## Visão Geral
+## 📖 Visão Geral
 
-O **Rivra** é um aplicativo desktop projetado para proporcionar uma experiência fluida, rápida e elegante ao baixar vídeos e músicas da internet. Com interface moderna em Dark Mode, dispensa qualquer uso de terminal e oferece controle total sobre qualidade, formatos e metadados.
-
----
-
-## Funcionalidades
-
-- **Download de Vídeo (MP4):** Suporte a resoluções até 1080p Full HD com áudio integrado (H.264 + AAC).
-- **Download de Áudio (MP3):** Extração com taxas de bits selecionáveis (128 kbps, 192 kbps e 320 kbps).
-- **Pré-visualização em Tempo Real:** Carregamento automático de miniatura, título, canal e duração ao inserir um link.
-- **Detecção Automática (Auto-Paste):** Ao focar na janela do app com um link copiado na área de transferência, ele é colado e analisado automaticamente.
-- **Suporte a Playlists:** Identificação e download de playlists completas com organização automática em pastas.
-- **Injeção de Metadados e Capas:** Gravação automática de tags ID3 e capa nos arquivos de áudio e vídeo via FFmpeg.
-- **Downloads Concorrentes Acelerados:** Segmentação de download em até 8 fragmentos simultâneos.
-- **Atualização Automática do yt-dlp:** Checagem silenciosa de novas versões do motor com opção de atualização em um clique direto na interface.
-- **Pasta de Destino Persistente:** O aplicativo memoriza sua pasta preferida entre inicializações.
+O **Rivra** é um aplicativo desktop para Windows projetado para baixar vídeos e músicas de mais de 1.000 plataformas com facilidade, velocidade e uma interface moderna em Dark Mode. Sem necessidade de usar terminal ou configurar comandos.
 
 ---
 
-## Plataformas Suportadas
+## 📦 Como Baixar e Usar (Usuário Comum)
 
-Graças ao motor `yt-dlp`, o Rivra oferece suporte a mais de 1.000 serviços, incluindo:
+Para quem quer apenas usar o programa sem instalar Python:
 
-| Plataforma | Suporte a Vídeo | Suporte a Áudio |
+1. Acesse a aba de [**Releases**](https://github.com/blnkDev/Yt-Downloader/releases).
+2. Baixe a versão mais recente do executável (`Rivra.exe` ou `Rivra.zip`).
+3. Execute o aplicativo e comece a baixar!
+
+---
+
+## ✨ Funcionalidades
+
+- **Vídeo em Alta Definição (MP4):** Resoluções até 1080p Full HD com áudio integrado (H.264 + AAC).
+- **Extração de Áudio (MP3):** Escolha de taxas de bits em 128 kbps, 192 kbps e 320 kbps (alta fidelidade).
+- **Pré-visualização Instantânea:** Carrega thumbnail, título, canal e duração assim que o link é inserido.
+- **Detecção Automática (Auto-Paste):** Ao focar na janela do app com um link copiado, ele é preenchido e analisado automaticamente.
+- **Suporte a Playlists:** Detecta e baixa listas de reprodução completas organizadas em pastas.
+- **Metadados e Capas Embutidos:** Injeta capa do álbum e tags ID3 diretamente nos arquivos via FFmpeg.
+- **Downloads Acelerados:** Segmentação em até 8 conexões simultâneas para máxima velocidade.
+- **Atualização Automática do yt-dlp:** Verifica se há atualizações do motor ao iniciar e permite atualizar em 1 clique.
+- **Pasta Memorizada:** Salva sua pasta de destino preferida para as próximas utilizações.
+
+---
+
+## 🌐 Plataformas Suportadas
+
+Compatível com mais de 1.000 sites através do motor `yt-dlp`:
+
+| Plataforma | Vídeo | Áudio |
 |---|:---:|:---:|
-| YouTube (Vídeos, Shorts, Playlists) | Sim | Sim |
-| TikTok | Sim | Sim |
-| Instagram (Reels, Vídeos) | Sim | Sim |
-| X / Twitter | Sim | Sim |
-| SoundCloud | — | Sim |
-| Vimeo | Sim | Sim |
-| Twitch (Clipes, VODs) | Sim | Sim |
-| Facebook | Sim | Sim |
+| **YouTube** (Vídeos, Shorts, Playlists) | Sim | Sim |
+| **TikTok** | Sim | Sim |
+| **Instagram** (Reels, Posts) | Sim | Sim |
+| **X / Twitter** | Sim | Sim |
+| **SoundCloud** | — | Sim |
+| **Vimeo** | Sim | Sim |
+| **Twitch** (Clipes, VODs) | Sim | Sim |
+| **Facebook** | Sim | Sim |
 
 ---
 
-## Estrutura e Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
 | Componente | Tecnologia | Finalidade |
 |---|---|---|
-| **Interface Gráfica** | [CustomTkinter](https://customtkinter.tomschimansky.com/) | Design Dark Mode moderno e responsivo |
-| **Motor de Extração** | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Parser e downloader multiplataforma |
-| **Processamento de Mídia** | [FFmpeg](https://ffmpeg.org/) | Muxing de faixas, conversão para MP3 e injeção de capas |
-| **Manipulação de Imagens** | [Pillow](https://pypi.org/project/Pillow/) | Redimensionamento e renderização de thumbnails |
-| **Comunicação Web** | [Requests](https://pypi.org/project/requests/) | Requisição de thumbnails e verificação de atualizações |
-| **Empacotamento** | [PyInstaller](https://pyinstaller.org/) | Compilação em executável único para Windows |
+| **Interface Gráfica** | [CustomTkinter](https://customtkinter.tomschimansky.com/) | UI fluida e responsiva em Dark Mode |
+| **Motor de Extração** | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Parser e download multimídia |
+| **Processamento de Mídia** | [FFmpeg](https://ffmpeg.org/) | Muxing de faixas, conversão de áudio e injeção de capas |
+| **Manipulação de Imagens** | [Pillow](https://pypi.org/project/Pillow/) | Renderização das capas e miniaturas |
+| **Requisições HTTP** | [Requests](https://pypi.org/project/requests/) | Download de capas e verificação de versões |
+| **Empacotamento** | [PyInstaller](https://pyinstaller.org/) | Compilação em executável standalone |
 
 ---
 
-## Como Executar
+## 💻 Executando a partir do Código-Fonte
 
 ### Pré-requisitos
-
-1. **Python 3.10 ou superior** instalado.
-2. Binários do **FFmpeg** (`ffmpeg.exe` e `ffprobe.exe`) presentes na pasta `ffmpeg/`.
-
-### Executando via código-fonte
+- Python 3.10 ou superior
+- Binários do FFmpeg na pasta `ffmpeg/`
 
 ```bash
-# Clone o repositório
+# 1. Clone o repositório
 git clone https://github.com/blnkDev/Yt-Downloader.git
 cd Yt-Downloader
 
-# Crie e ative um ambiente virtual (opcional, recomendado)
+# 2. Crie e ative o ambiente virtual (opcional)
 python -m venv venv
 venv\Scripts\activate
 
-# Instale as dependências
+# 3. Instale as dependências
 pip install -r requirements.txt
 
-# Inicie o aplicativo
+# 4. Inicie o aplicativo
 python baixador.py
 ```
 
 ---
 
-## Compilação do Executável (.exe)
+## 🔨 Gerando o Executável (.exe)
 
-Para gerar o binário independente:
+Caso queira compilar seu próprio `.exe`:
 
 ```bash
 pip install pyinstaller
 python -m PyInstaller --clean baixador.spec
 ```
 
-O arquivo final será gerado em `dist/baixador.exe`.
+O executável pronto estará em `dist/baixador.exe`.
 
 ---
 
-## Licença
+## 📄 Licença
 
-Distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
+Distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

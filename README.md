@@ -30,7 +30,7 @@ O **Rivra** é um aplicativo desktop para Windows projetado para baixar vídeos 
 
 ---
 
-## 📦 Como Baixar e Usar (Usuário Comum)
+## 📦 Como Baixar e Usar
 
 Para quem quer apenas usar o programa sem instalar Python:
 

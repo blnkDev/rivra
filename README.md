@@ -1,74 +1,113 @@
-# Rivra
+<div align="center">
 
-> A fast, modern media downloader for Windows — powered by [yt-dlp](https://github.com/yt-dlp/yt-dlp).
+  <img src="docs/logo.png" alt="Rivra Logo" width="140" />
 
-<!-- Replace with your logo once available -->
-<!-- <p align="center"><img src="docs/logo.png" alt="Rivra logo" width="180" /></p> -->
+  # Rivra
 
----
+  **Baixador multimídia moderno e veloz para Windows**  
+  Construído com Python, CustomTkinter e o poder do [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
-## Overview
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
+    <img src="https://img.shields.io/badge/GUI-CustomTkinter-2B2B2B?style=flat-square" alt="CustomTkinter" />
+    <img src="https://img.shields.io/badge/Engine-yt--dlp-FF0000?style=flat-square" alt="yt-dlp" />
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License MIT" />
+  </p>
 
-Rivra is a desktop application that lets you download videos and audio from over 1,000 platforms — YouTube, TikTok, Instagram, X/Twitter, SoundCloud, Vimeo, and more — through a clean, dark-mode interface. No terminal required.
-
-## Features
-
-| | |
-|---|---|
-| Video | MP4 up to 1080p Full HD (H.264 + AAC) |
-| Audio | MP3 at 128 / 192 / 320 kbps |
-| Platforms | YouTube, TikTok, Instagram Reels, X/Twitter, SoundCloud, Vimeo, Twitch, Facebook and 1,000+ more |
-| Preview | Thumbnail, title, channel and duration loaded automatically when you paste a link |
-| Auto-paste | Detects a copied link when the window gains focus |
-| Playlists | Detects and downloads full playlists into organized subfolders |
-| Metadata | Embeds cover art and ID3 tags into every MP3 and MP4 |
-| Speed | Up to 8 concurrent fragments and 10 MB chunks |
-| Updates | Checks for yt-dlp updates on startup and installs them in the background |
-| Persistence | Remembers your last destination folder between sessions |
-
-## Tech Stack
-
-| Package | Role |
-|---|---|
-| [Python 3.12](https://www.python.org/) | Runtime |
-| [CustomTkinter](https://customtkinter.tomschimansky.com/) | Dark-mode GUI |
-| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Download engine |
-| [FFmpeg](https://ffmpeg.org/) | Media processing & muxing |
-| [Pillow](https://pypi.org/project/Pillow/) | Thumbnail rendering |
-| [Requests](https://pypi.org/project/requests/) | HTTP (thumbnails, update checks) |
-| [PyInstaller](https://pyinstaller.org/) | Standalone executable |
+</div>
 
 ---
 
-## Running from source
+## Visão Geral
 
-**Requirements:** Python 3.10+, FFmpeg binaries inside `ffmpeg/`
+O **Rivra** é um aplicativo desktop projetado para proporcionar uma experiência fluida, rápida e elegante ao baixar vídeos e músicas da internet. Com interface moderna em Dark Mode, dispensa qualquer uso de terminal e oferece controle total sobre qualidade, formatos e metadados.
+
+---
+
+## Funcionalidades
+
+- **Download de Vídeo (MP4):** Suporte a resoluções até 1080p Full HD com áudio integrado (H.264 + AAC).
+- **Download de Áudio (MP3):** Extração com taxas de bits selecionáveis (128 kbps, 192 kbps e 320 kbps).
+- **Pré-visualização em Tempo Real:** Carregamento automático de miniatura, título, canal e duração ao inserir um link.
+- **Detecção Automática (Auto-Paste):** Ao focar na janela do app com um link copiado na área de transferência, ele é colado e analisado automaticamente.
+- **Suporte a Playlists:** Identificação e download de playlists completas com organização automática em pastas.
+- **Injeção de Metadados e Capas:** Gravação automática de tags ID3 e capa nos arquivos de áudio e vídeo via FFmpeg.
+- **Downloads Concorrentes Acelerados:** Segmentação de download em até 8 fragmentos simultâneos.
+- **Atualização Automática do yt-dlp:** Checagem silenciosa de novas versões do motor com opção de atualização em um clique direto na interface.
+- **Pasta de Destino Persistente:** O aplicativo memoriza sua pasta preferida entre inicializações.
+
+---
+
+## Plataformas Suportadas
+
+Graças ao motor `yt-dlp`, o Rivra oferece suporte a mais de 1.000 serviços, incluindo:
+
+| Plataforma | Suporte a Vídeo | Suporte a Áudio |
+|---|:---:|:---:|
+| YouTube (Vídeos, Shorts, Playlists) | Sim | Sim |
+| TikTok | Sim | Sim |
+| Instagram (Reels, Vídeos) | Sim | Sim |
+| X / Twitter | Sim | Sim |
+| SoundCloud | — | Sim |
+| Vimeo | Sim | Sim |
+| Twitch (Clipes, VODs) | Sim | Sim |
+| Facebook | Sim | Sim |
+
+---
+
+## Estrutura e Tecnologias
+
+| Componente | Tecnologia | Finalidade |
+|---|---|---|
+| **Interface Gráfica** | [CustomTkinter](https://customtkinter.tomschimansky.com/) | Design Dark Mode moderno e responsivo |
+| **Motor de Extração** | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Parser e downloader multiplataforma |
+| **Processamento de Mídia** | [FFmpeg](https://ffmpeg.org/) | Muxing de faixas, conversão para MP3 e injeção de capas |
+| **Manipulação de Imagens** | [Pillow](https://pypi.org/project/Pillow/) | Redimensionamento e renderização de thumbnails |
+| **Comunicação Web** | [Requests](https://pypi.org/project/requests/) | Requisição de thumbnails e verificação de atualizações |
+| **Empacotamento** | [PyInstaller](https://pyinstaller.org/) | Compilação em executável único para Windows |
+
+---
+
+## Como Executar
+
+### Pré-requisitos
+
+1. **Python 3.10 ou superior** instalado.
+2. Binários do **FFmpeg** (`ffmpeg.exe` e `ffprobe.exe`) presentes na pasta `ffmpeg/`.
+
+### Executando via código-fonte
 
 ```bash
+# Clone o repositório
 git clone https://github.com/blnkDev/Yt-Downloader.git
 cd Yt-Downloader
 
+# Crie e ative um ambiente virtual (opcional, recomendado)
 python -m venv venv
 venv\Scripts\activate
 
+# Instale as dependências
 pip install -r requirements.txt
+
+# Inicie o aplicativo
 python baixador.py
 ```
 
-## Building the executable
+---
+
+## Compilação do Executável (.exe)
+
+Para gerar o binário independente:
 
 ```bash
 pip install pyinstaller
 python -m PyInstaller --clean baixador.spec
-# Output: dist/baixador.exe
 ```
+
+O arquivo final será gerado em `dist/baixador.exe`.
 
 ---
 
-## Contributing
+## Licença
 
-Issues and pull requests are welcome.
-
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
+Distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais informações.

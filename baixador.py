@@ -111,7 +111,7 @@ class YouTubeDownloaderApp(ctk.CTk):
         super().__init__()
 
         # Janela Compacta e Elegante
-        self.title("Media Downloader Pro")
+        self.title("Rivra")
         self.geometry("620x540")
         self.resizable(False, False)
         self.centralizar_janela()

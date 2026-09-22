@@ -1,90 +1,74 @@
-# ⚡ Media Downloader Pro
+# Rivra
 
-Aplicativo moderno, rápido e poderoso para baixar vídeos e músicas de **mais de 1000 plataformas** (YouTube, TikTok, Instagram, X/Twitter, SoundCloud e muito mais), com interface gráfica elegante em **Dark Mode** usando Python, CustomTkinter e yt-dlp.
+> A fast, modern media downloader for Windows — powered by [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
----
-
-## ✨ Funcionalidades
-
-- 🎬 **Vídeos em MP4:** Suporte a resoluções desde 480p até 1080p Full HD (codec H.264 + AAC).
-- 🎵 **Músicas em MP3:** Extração de áudio com seleção de qualidade (320 kbps, 192 kbps, 128 kbps).
-- 🌐 **Suporte Multiplataforma:** YouTube, TikTok, Instagram Reels, X/Twitter, SoundCloud, Facebook, Vimeo, Twitch e outros 1000+ sites via yt-dlp.
-- 🖼️ **Pré-Visualização em Tempo Real:** Carrega automaticamente thumbnail, título, canal e duração ao colar o link.
-- 📋 **Auto-Paste:** Detecta links copiados na área de transferência ao focar na janela e preenche automaticamente.
-- 🎨 **Injeção de Capa e Metadados:** Embutimento automático da capa oficial e tags ID3 em MP3 e MP4.
-- 📑 **Suporte a Playlists:** Detecção inteligente e opção de baixar playlists completas em pastas organizadas.
-- ⚡ **Alta Velocidade:** Até 8 conexões concorrentes e chunks de 10 MB para download acelerado.
-- 🔄 **Auto-Update do yt-dlp:** Verifica e instala atualizações do motor de download automaticamente em background.
-- 💾 **Pasta Persistente:** Lembra a última pasta de destino escolhida entre sessões.
-- ⏹️ **Botão Cancelar:** Interrompe downloads em andamento a qualquer momento.
-- 🌙 **Interface Dark Mode:** Visual moderno estilo Windows 11 com CustomTkinter.
-- 📦 **Executável Portátil (.exe):** Roda sem instalar Python, FFmpeg ou Deno separadamente.
+<!-- Replace with your logo once available -->
+<!-- <p align="center"><img src="docs/logo.png" alt="Rivra logo" width="180" /></p> -->
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Overview
 
-| Tecnologia | Função |
+Rivra is a desktop application that lets you download videos and audio from over 1,000 platforms — YouTube, TikTok, Instagram, X/Twitter, SoundCloud, Vimeo, and more — through a clean, dark-mode interface. No terminal required.
+
+## Features
+
+| | |
 |---|---|
-| [Python 3.12+](https://www.python.org/) | Linguagem principal |
-| [CustomTkinter](https://customtkinter.tomschimansky.com/) | Interface gráfica Dark Mode |
-| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Motor de extração e download |
-| [FFmpeg](https://ffmpeg.org/) | Processamento de mídia, conversão e merge |
-| [Pillow](https://pypi.org/project/Pillow/) | Processamento de thumbnails |
-| [Requests](https://pypi.org/project/requests/) | Fetch de thumbnails e verificação de updates |
-| [PyInstaller](https://pyinstaller.org/) | Geração do executável standalone |
+| Video | MP4 up to 1080p Full HD (H.264 + AAC) |
+| Audio | MP3 at 128 / 192 / 320 kbps |
+| Platforms | YouTube, TikTok, Instagram Reels, X/Twitter, SoundCloud, Vimeo, Twitch, Facebook and 1,000+ more |
+| Preview | Thumbnail, title, channel and duration loaded automatically when you paste a link |
+| Auto-paste | Detects a copied link when the window gains focus |
+| Playlists | Detects and downloads full playlists into organized subfolders |
+| Metadata | Embeds cover art and ID3 tags into every MP3 and MP4 |
+| Speed | Up to 8 concurrent fragments and 10 MB chunks |
+| Updates | Checks for yt-dlp updates on startup and installs them in the background |
+| Persistence | Remembers your last destination folder between sessions |
+
+## Tech Stack
+
+| Package | Role |
+|---|---|
+| [Python 3.12](https://www.python.org/) | Runtime |
+| [CustomTkinter](https://customtkinter.tomschimansky.com/) | Dark-mode GUI |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Download engine |
+| [FFmpeg](https://ffmpeg.org/) | Media processing & muxing |
+| [Pillow](https://pypi.org/project/Pillow/) | Thumbnail rendering |
+| [Requests](https://pypi.org/project/requests/) | HTTP (thumbnails, update checks) |
+| [PyInstaller](https://pyinstaller.org/) | Standalone executable |
 
 ---
 
-## 🚀 Como Executar (via código fonte)
+## Running from source
 
-### Pré-requisitos
-- Python 3.10 ou superior
-- FFmpeg na pasta `ffmpeg/` do projeto
+**Requirements:** Python 3.10+, FFmpeg binaries inside `ffmpeg/`
 
-### Passo a Passo
+```bash
+git clone https://github.com/blnkDev/Yt-Downloader.git
+cd Yt-Downloader
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/blnkDev/Yt-Downloader.git
-   cd Yt-Downloader
-   ```
+python -m venv venv
+venv\Scripts\activate
 
-2. **Crie e ative um ambiente virtual:**
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate     # Windows
-   ```
+pip install -r requirements.txt
+python baixador.py
+```
 
-3. **Instale as dependências:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Execute o aplicativo:**
-   ```bash
-   python baixador.py
-   ```
-
----
-
-## 📦 Como Gerar o Executável (.exe)
+## Building the executable
 
 ```bash
 pip install pyinstaller
 python -m PyInstaller --clean baixador.spec
+# Output: dist/baixador.exe
 ```
 
-O executável será gerado em `dist/baixador.exe` com ícone e todos os componentes embutidos.
-
 ---
 
-## 🤝 Contribuições
+## Contributing
 
-Sinta-se à vontade para abrir **Issues** ou enviar um **Pull Request**. Toda ajuda é bem-vinda!
+Issues and pull requests are welcome.
 
----
+## License
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+MIT — see [LICENSE](LICENSE) for details.

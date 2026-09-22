@@ -1,1 +1,8 @@
-yt-dlp
+yt-dlp>=2025.0.0
+customtkinter>=6.0.0
+pillow>=10.0.0
+requests>=2.31.0
+mutagen>=1.47.0
+curl-cffi>=0.7.0
+yt-dlp-ejs>=0.8.0
+quickjs>=1.19.0

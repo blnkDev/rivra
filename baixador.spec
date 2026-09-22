@@ -1,12 +1,30 @@
 # -*- mode: python ; coding: utf-8 -*-
+from PyInstaller.utils.hooks import collect_all, collect_submodules
 
+datas, binaries, hiddenimports = collect_all('customtkinter')
+datas += [('ffmpeg', 'ffmpeg'), ('favicon.ico', '.')]
+
+hiddenimports += [
+    'requests',
+    'PIL',
+    'PIL.Image',
+    'PIL.ImageTk',
+    'PIL._imaging',
+    'PIL.JpegImagePlugin',
+    'PIL.PngImagePlugin',
+    'PIL.WebPImagePlugin',
+    'io',
+    'yt_dlp',
+    'yt_dlp.utils',
+]
+hiddenimports += collect_submodules('yt_dlp')
 
 a = Analysis(
     ['baixador.py'],
     pathex=[],
-    binaries=[],
-    datas=[('ffmpeg', 'ffmpeg')],
-    hiddenimports=[],
+    binaries=binaries,
+    datas=datas,
+    hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -35,4 +53,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='favicon.ico',
 )

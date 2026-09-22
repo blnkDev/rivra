@@ -1,0 +1,47 @@
+# Build e distribuição
+dist/
+build/
+*.spec.bak
+
+# Binários pesados (não versionados — baixe separadamente)
+ffmpeg/deno.exe
+ffmpeg/ffmpeg.exe
+ffmpeg/ffprobe.exe
+
+# Ícone (binário — gerencie manualmente)
+favicon.ico
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+.env/
+
+# Configurações do usuário (dados locais, não do repo)
+*.json
+!package.json
+
+# Logs
+*.log
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/

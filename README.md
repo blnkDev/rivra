@@ -8,7 +8,7 @@
   Construído com Python, CustomTkinter e o poder do [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
   <p>
-    <a href="https://github.com/blnkDev/Yt-Downloader/releases/latest">
+    <a href="[https://github.com/blnkDev/Yt-Downloader/releases/latest](https://release-assets.githubusercontent.com/github-production-release-asset/1007483907/e6cff232-4095-416c-8f55-26a40ad84a90?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-09-23T01%3A00%3A03Z&rscd=attachment%3B+filename%3DRivra.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-09-22T23%3A59%3A13Z&ske=2026-09-23T01%3A00%3A03Z&sks=b&skv=2018-11-09&sig=L0QpQjtiGYUBJ%2F1t3T7zuoS8sbAg7ED5VjlQnJrLQ9c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MDEyNDI1MywibmJmIjoxNzkwMTIyNDUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZCA3uUKEwhkjjufYB7umUefkiA-9TER0sJwAdZnQ27A&response-content-disposition=attachment%3B%20filename%3DRivra.exe&response-content-type=application%2Foctet-stream)">
       <img src="https://img.shields.io/badge/Download-Windows%20(.exe)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows" />
     </a>
   </p>

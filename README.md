@@ -2,13 +2,13 @@
 
   <img src="docs/logo.png" alt="Rivra Logo" width="130" />
 
-  # Rivra
+# Rivra
 
-  **Baixador multimídia moderno, rápido e intuitivo para Windows**  
-  Construído com Python, CustomTkinter e o poder do [yt-dlp](https://github.com/yt-dlp/yt-dlp).
+**A modern, fast, and intuitive multimedia downloader for Windows**
+Built with Python, CustomTkinter, and the power of [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
   <p>
-    <a href="[https://github.com/blnkDev/Yt-Downloader/releases/latest](https://release-assets.githubusercontent.com/github-production-release-asset/1007483907/e6cff232-4095-416c-8f55-26a40ad84a90?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-09-23T01%3A00%3A03Z&rscd=attachment%3B+filename%3DRivra.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-09-22T23%3A59%3A13Z&ske=2026-09-23T01%3A00%3A03Z&sks=b&skv=2018-11-09&sig=L0QpQjtiGYUBJ%2F1t3T7zuoS8sbAg7ED5VjlQnJrLQ9c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MDEyNDI1MywibmJmIjoxNzkwMTIyNDUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZCA3uUKEwhkjjufYB7umUefkiA-9TER0sJwAdZnQ27A&response-content-disposition=attachment%3B%20filename%3DRivra.exe&response-content-type=application%2Foctet-stream)">
+    <a href="https://github.com/blnkDev/Yt-Downloader/releases/latest">
       <img src="https://img.shields.io/badge/Download-Windows%20(.exe)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows" />
     </a>
   </p>
@@ -24,103 +24,147 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Overview
 
-O **Rivra** é um aplicativo desktop para Windows projetado para baixar vídeos e músicas de mais de 1.000 plataformas com facilidade, velocidade e uma interface moderna em Dark Mode. Sem necessidade de usar terminal ou configurar comandos.
+**Rivra** is a Windows desktop application designed to download videos and audio from **1,000+ platforms** with ease, speed, and a modern Dark Mode interface.
 
----
-
-## 📦 Como Baixar e Usar
-
-Para quem quer apenas usar o programa sem instalar Python:
-
-1. Acesse a aba de [**Releases**](https://github.com/blnkDev/Yt-Downloader/releases).
-2. Baixe a versão mais recente do executável (`Rivra.exe` ou `Rivra.zip`).
-3. Execute o aplicativo e comece a baixar!
+No terminal commands. No complicated configuration. Just paste a link and download.
 
 ---
 
-## ✨ Funcionalidades
-
-- **Vídeo em Alta Definição (MP4):** Resoluções até 1080p Full HD com áudio integrado (H.264 + AAC).
-- **Extração de Áudio (MP3):** Escolha de taxas de bits em 128 kbps, 192 kbps e 320 kbps (alta fidelidade).
-- **Pré-visualização Instantânea:** Carrega thumbnail, título, canal e duração assim que o link é inserido.
-- **Detecção Automática (Auto-Paste):** Ao focar na janela do app com um link copiado, ele é preenchido e analisado automaticamente.
-- **Suporte a Playlists:** Detecta e baixa listas de reprodução completas organizadas em pastas.
-- **Metadados e Capas Embutidos:** Injeta capa do álbum e tags ID3 diretamente nos arquivos via FFmpeg.
-- **Downloads Acelerados:** Segmentação em até 8 conexões simultâneas para máxima velocidade.
-- **Atualização Automática do yt-dlp:** Verifica se há atualizações do motor ao iniciar e permite atualizar em 1 clique.
-- **Pasta Memorizada:** Salva sua pasta de destino preferida para as próximas utilizações.
+## 📸 Interface Preview
 
 ---
 
-## 🌐 Plataformas Suportadas
+## 📦 Download & Usage
 
-Compatível com mais de 1.000 sites através do motor `yt-dlp`:
+If you just want to use Rivra without installing Python or any dependencies:
 
-| Plataforma | Vídeo | Áudio |
-|---|:---:|:---:|
-| **YouTube** (Vídeos, Shorts, Playlists) | Sim | Sim |
-| **TikTok** | Sim | Sim |
-| **Instagram** (Reels, Posts) | Sim | Sim |
-| **X / Twitter** | Sim | Sim |
-| **SoundCloud** | — | Sim |
-| **Vimeo** | Sim | Sim |
-| **Twitch** (Clipes, VODs) | Sim | Sim |
-| **Facebook** | Sim | Sim |
+1. Go to the [**Releases**](https://github.com/blnkDev/Yt-Downloader/releases) page.
+2. Download the latest version (`Rivra.exe` or `Rivra.zip`).
+3. Run the application and start downloading!
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ✨ Features
 
-| Componente | Tecnologia | Finalidade |
-|---|---|---|
-| **Interface Gráfica** | [CustomTkinter](https://customtkinter.tomschimansky.com/) | UI fluida e responsiva em Dark Mode |
-| **Motor de Extração** | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Parser e download multimídia |
-| **Processamento de Mídia** | [FFmpeg](https://ffmpeg.org/) | Muxing de faixas, conversão de áudio e injeção de capas |
-| **Manipulação de Imagens** | [Pillow](https://pypi.org/project/Pillow/) | Renderização das capas e miniaturas |
-| **Requisições HTTP** | [Requests](https://pypi.org/project/requests/) | Download de capas e verificação de versões |
-| **Empacotamento** | [PyInstaller](https://pyinstaller.org/) | Compilação em executável standalone |
+* **High-Quality Video (MP4):** Up to 1080p Full HD with integrated audio (H.264 + AAC).
+* **Audio Extraction (MP3):** Choose between 128 kbps, 192 kbps, and 320 kbps.
+* **Instant Preview:** Automatically loads the thumbnail, title, channel, and duration as soon as a link is entered.
+* **Automatic Link Detection:** When you focus the app with a copied link, Rivra automatically detects, pastes, and analyzes it.
+* **Playlist Support:** Detects and downloads complete playlists, automatically organizing files into folders.
+* **Embedded Metadata & Cover Art:** Automatically embeds album artwork and ID3 tags into media files using FFmpeg.
+* **Accelerated Downloads:** Uses up to 8 concurrent connections for faster downloads.
+* **Automatic yt-dlp Updates:** Checks for engine updates on startup and lets you update with a single click.
+* **Persistent Download Folder:** Remembers your preferred destination folder between sessions.
+* **Safe Cancellation:** Cancel downloads at any time without freezing the application.
+* **Asynchronous Processing:** Downloads and media processing run in the background, keeping the interface responsive.
 
 ---
 
-## 💻 Executando a partir do Código-Fonte
+## 🌐 Supported Platforms
 
-### Pré-requisitos
-- Python 3.10 ou superior
-- Binários do FFmpeg na pasta `ffmpeg/`
+Rivra supports **1,000+ websites** through the `yt-dlp` engine.
+
+Some of the most popular platforms include:
+
+| Platform                                | Video | Audio |
+| --------------------------------------- | :---: | :---: |
+| **YouTube** (Videos, Shorts, Playlists) |  Yes  |  Yes  |
+| **TikTok**                              |  Yes  |  Yes  |
+| **Instagram** (Reels, Posts)            |  Yes  |  Yes  |
+| **X / Twitter**                         |  Yes  |  Yes  |
+| **SoundCloud**                          |   —   |  Yes  |
+| **Vimeo**                               |  Yes  |  Yes  |
+| **Twitch** (Clips, VODs)                |  Yes  |  Yes  |
+| **Facebook**                            |  Yes  |  Yes  |
+
+> **Note:** Actual availability may vary depending on the platform and its current restrictions. Rivra relies on `yt-dlp` for platform support.
+
+---
+
+## 🛠️ Built With
+
+| Component             | Technology                                                | Purpose                                                  |
+| --------------------- | --------------------------------------------------------- | -------------------------------------------------------- |
+| **GUI**               | [CustomTkinter](https://customtkinter.tomschimansky.com/) | Modern and responsive Dark Mode interface                |
+| **Extraction Engine** | [yt-dlp](https://github.com/yt-dlp/yt-dlp)                | Multimedia extraction and downloading                    |
+| **Media Processing**  | [FFmpeg](https://ffmpeg.org/)                             | Stream muxing, audio conversion, and cover art embedding |
+| **Image Processing**  | [Pillow](https://pypi.org/project/Pillow/)                | Thumbnail and artwork rendering                          |
+| **HTTP Requests**     | [Requests](https://pypi.org/project/requests/)            | Cover downloads and version checks                       |
+| **Packaging**         | [PyInstaller](https://pyinstaller.org/)                   | Standalone executable generation                         |
+
+---
+
+## 💻 Running from Source
+
+### Requirements
+
+* Python 3.10 or newer
+* FFmpeg binaries inside the `ffmpeg/` directory
 
 ```bash
-# 1. Clone o repositório
+# 1. Clone the repository
 git clone https://github.com/blnkDev/Yt-Downloader.git
 cd Yt-Downloader
 
-# 2. Crie e ative o ambiente virtual (opcional)
+# 2. Create and activate a virtual environment (optional)
 python -m venv venv
 venv\Scripts\activate
 
-# 3. Instale as dependências
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Inicie o aplicativo
+# 4. Launch the application
 python baixador.py
 ```
 
 ---
 
-## 🔨 Gerando o Executável (.exe)
+## 🔨 Building the Executable
 
-Caso queira compilar seu próprio `.exe`:
+To build your own Windows executable:
 
 ```bash
 pip install pyinstaller
 python -m PyInstaller --clean baixador.spec
 ```
 
-O executável pronto estará em `dist/baixador.exe`.
+The generated executable will be located at:
+
+```text
+dist/baixador.exe
+```
 
 ---
 
-## 📄 Licença
+## 📁 Project Structure
 
-Distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+```text
+Rivra/
+├── docs/
+│   └── logo.png
+├── ffmpeg/
+│   └── ...
+├── baixador.py
+├── baixador.spec
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
+
+---
+
+## 📄 License
+
+Rivra is distributed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for more details.
+
+---
+
+<div align="center">
+
+**Rivra — Free. Fast. Simple.**
+
+</div>

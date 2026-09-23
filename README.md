@@ -4,7 +4,7 @@
 
 # Rivra
 
-**A modern, fast, and intuitive multimedia downloader for Windows**
+**A modern, fast, and intuitive multimedia downloader for Windows**<br>
 Built with Python, CustomTkinter, and the power of [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
   <p>
